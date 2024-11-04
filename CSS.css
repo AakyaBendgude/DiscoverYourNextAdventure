@@ -1,0 +1,183 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color, #f9f9f9);
+    color: var(--text-color, #333);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar button:hover {
+    background-color: #333;
+}
+
+.hero {
+    background: url('INDIA\ MAP.webp');
+    background-size:contain;
+    background-repeat: repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.hero-content.dt{
+    animation: fading 5s both;
+}
+
+@keyframes fading {
+    from{
+        background-color: rgba(255, 0, 0, 0);
+    }
+    to{
+        background-color: white;
+    }
+}
+
+.hero-content{
+    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0);
+    padding: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.destination {
+    background-color: white;
+    height: 100%;    
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.destination img {
+    width: 100%;
+    
+}
+
+.destination-content {
+    padding: 1rem;
+}
+
+.destination-content h3 {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.destination-content p {
+    color: #555;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    color: #333;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #222;
+    
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
